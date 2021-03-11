@@ -17,9 +17,16 @@ import { NawfelAppComponent } from './Nawfel/nawfel.app.component';
 import { MarwenAppComponent } from './Marwen/marwen.app.component';
 import { MouhamedAppComponent } from './Mouhamed/mouhamed.app.component';
 
+
+import { KamelAppComponent } from "./kamel/kamel.app.component";
+import { EsriMapComponent } from "./kamel/esri-map/esri-map.component";
+
+
 @NgModule({
   declarations: [
     AppComponent,
+    KamelAppComponent,
+    EsriMapComponent,
     AamlAppComponent,
     AmineAppComponent,
     NawfelAppComponent,
@@ -36,7 +43,7 @@ import { MouhamedAppComponent } from './Mouhamed/mouhamed.app.component';
     MatNativeDateModule,
     ReactiveFormsModule,
   ],
-  entryComponents: [AppComponent],
+  entryComponents: [AppComponent, KamelAppComponent],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
   ],
