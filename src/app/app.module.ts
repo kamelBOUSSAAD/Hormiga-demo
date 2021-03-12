@@ -22,6 +22,8 @@ import { KamelAppComponent } from "./kamel/kamel.app.component";
 import { EsriMapComponent } from "./kamel/esri-map/esri-map.component";
 import {NawfelAppModule} from "./Nawfel/nawfel-app.module";
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
