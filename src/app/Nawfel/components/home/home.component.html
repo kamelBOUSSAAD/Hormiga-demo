@@ -1,0 +1,22 @@
+
+<form class="note-form">
+    <mat-form-field class="note-full-width">
+      <mat-label>Take Note</mat-label>
+      <input matInput #note maxlength="256" placeholder="write your new note 🤓">
+      <mat-hint align="end">{{note.value.length}} / 256</mat-hint>
+    </mat-form-field>
+    
+    <button mat-icon-button color="accent">
+      Save <mat-icon>favorite</mat-icon>
+      </button>
+       
+        
+  </form>
+  
+  <div class="example-button-container">
+    
+    <button (click)='toggleNotes()' mat-fab color="accent" >
+        View Notes <mat-icon>bookmark</mat-icon>
+    </button>
+    <p *ngIf='showNotes'>To Be continued</p>
+  </div>

@@ -20,7 +20,7 @@ import { MouhamedAppComponent } from './Mouhamed/mouhamed.app.component';
 
 import { KamelAppComponent } from "./kamel/kamel.app.component";
 import { EsriMapComponent } from "./kamel/esri-map/esri-map.component";
-
+import {NawfelAppModule} from "./Nawfel/nawfel-app.module";
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { EsriMapComponent } from "./kamel/esri-map/esri-map.component";
     AmineAppComponent,
     NawfelAppComponent,
     MarwenAppComponent,
-    MouhamedAppComponent    
+    MouhamedAppComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +42,7 @@ import { EsriMapComponent } from "./kamel/esri-map/esri-map.component";
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    NawfelAppModule
   ],
   entryComponents: [AppComponent, KamelAppComponent],
   providers: [
