@@ -21,9 +21,16 @@ import { MouhamedAppComponent } from './Mouhamed/mouhamed.app.component';
 import { KamelAppComponent } from "./kamel/kamel.app.component";
 import { EsriMapComponent } from "./kamel/esri-map/esri-map.component";
 import {NawfelAppModule} from "./Nawfel/nawfel-app.module";
+import { LoginComponent } from './Amal/login/login.component';
+import { RegisterComponent } from './Amal/register/register.component';
+
+import { MenuComponent } from './Amal/menu/menu.component';
+import { RouterModule, Routes } from '@angular/router';
 
 
-
+const appRoutes: Routes = [
+  {path: 'amine' ,component:AmineAppComponent},
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +41,9 @@ import {NawfelAppModule} from "./Nawfel/nawfel-app.module";
     NawfelAppComponent,
     MarwenAppComponent,
     MouhamedAppComponent,
+    LoginComponent,
+    RegisterComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +54,8 @@ import {NawfelAppModule} from "./Nawfel/nawfel-app.module";
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    NawfelAppModule
+    NawfelAppModule,
+    RouterModule.forRoot(appRoutes)
   ],
   entryComponents: [AppComponent, KamelAppComponent],
   providers: [
