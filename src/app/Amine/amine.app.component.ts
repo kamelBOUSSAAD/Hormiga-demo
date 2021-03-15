@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import {UserseviceService} from './service/usersevice.service'
+import {UserseviceService} from './service/usersevice.service';
+import {MatDialog,MatDialogConfig} from '@angular/material/dialog'
+import { NewuserComponent } from './newuser/newuser.component';
 
 @Component({
   selector: 'amine-app',
@@ -7,7 +9,14 @@ import {UserseviceService} from './service/usersevice.service'
   styleUrls: ['./amine.app.component.css']
 })
 export class AmineAppComponent { 
-  constructor(private userservice : UserseviceService){}
+  constructor(private userservice : UserseviceService,private dialog:MatDialog){}
   displayedColumns: string[] = ['id', 'lastname', 'firstname', 'email'];
   dataSource = this.userservice.ELEMENT_DATA;
+  oncreate(){
+    const DialogConfig = new MatDialogConfig();
+    DialogConfig.disableClose = true;
+    DialogConfig.autoFocus = true;
+    DialogConfig.width ="60%";
+    this.dialog.open(NewuserComponent);
+  }
 }

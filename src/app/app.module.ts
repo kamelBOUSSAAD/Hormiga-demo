@@ -27,6 +27,7 @@ import { RegisterComponent } from './Amal/register/register.component';
 import { MenuComponent } from './Amal/menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AppareilComponent } from './Mouhamed/appareil/appareil.component';
+import { NewuserComponent } from './Amine/newuser/newuser.component';
 
 const appRoutes: Routes = [
   {path: 'amine' ,component:AmineAppComponent},
@@ -44,7 +45,8 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     MenuComponent,
-    AppareilComponent
+    AppareilComponent,
+    NewuserComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,7 @@ const appRoutes: Routes = [
     NawfelAppModule,
     RouterModule.forRoot(appRoutes)
   ],
-  entryComponents: [AppComponent, KamelAppComponent],
+  entryComponents: [AppComponent, KamelAppComponent,NewuserComponent],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
   ],

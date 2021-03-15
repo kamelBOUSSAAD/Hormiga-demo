@@ -1,4 +1,15 @@
 <!--<div class="my-class"> I'm Amine App componenet :) </div>-->
+<div>
+  <!--button Add user-->
+  <button mat-raised-button (click)="oncreate()">
+    <mat-icon>add</mat-icon>Create
+  </button>
+  <!--filter pour chercher user-->
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput placeholder="Search" #input>
+  </mat-form-field>
+</div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!-- id Column -->

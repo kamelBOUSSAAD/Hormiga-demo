@@ -20,5 +20,5 @@ export class MouhamedAppComponent {
       name: 'Television',
       status: 'éteint'
     }
-  ]
+  ] 
  }
