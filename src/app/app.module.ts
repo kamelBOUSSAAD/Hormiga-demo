@@ -26,7 +26,7 @@ import { RegisterComponent } from './Amal/register/register.component';
 
 import { MenuComponent } from './Amal/menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
-
+import { AppareilComponent } from './Mouhamed/appareil/appareil.component';
 
 const appRoutes: Routes = [
   {path: 'amine' ,component:AmineAppComponent},
@@ -43,7 +43,8 @@ const appRoutes: Routes = [
     MouhamedAppComponent,
     LoginComponent,
     RegisterComponent,
-    MenuComponent
+    MenuComponent,
+    AppareilComponent
   ],
   imports: [
     BrowserModule,
