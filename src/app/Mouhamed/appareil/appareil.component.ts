@@ -26,14 +26,11 @@ export class AppareilComponent implements OnInit {
   ]
 
   constructor() {
-    setTimeout(
-      () => {
-        this.isAuth = true;
-      }, 4000
-    );
+    
   }
 
   ngOnInit(): void {
+    
   }
 
   getStatus(){
@@ -41,7 +38,7 @@ export class AppareilComponent implements OnInit {
   }
 
   onAllumer(){
-
+    console.log('On allume tout!')
   }
 
   getColor() {

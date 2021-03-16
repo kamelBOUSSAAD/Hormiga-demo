@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppareilService } from './services/appareil.service';
 
 @Component({
   selector: 'mouhamed-app',
@@ -7,18 +8,25 @@ import { Component } from '@angular/core';
 })
 export class MouhamedAppComponent {
   isAuth = false;
-  appareils =[
-    {
-      name: 'Machine à laver',
-      status: 'éteint'
-    },
-    {
-      name: 'Frigo',
-      status: 'allumer'
-    },
-    {
-      name: 'Television',
-      status: 'éteint'
+  appareils: any[];
+  constructor(private appareilService: AppareilService) {
+    setTimeout(
+      () => {
+        this.isAuth = true;
+      }, 4000
+    );
+  }
+  ngOnInit() {
+    this.appareils = this.appareilService.appareils;
+  }
+  onAllumer() {
+    this.appareilService.switchOnAll();
+  }
+  onEteindre() {
+    if(confirm('Etes-vous sûr de vouloir éteindre tous vos appareils ?')) {
+      this.appareilService.switchOffAll();
+    } else {
+      return null;
     }
-  ] 
- }
+}
+}
