@@ -26,7 +26,7 @@ import { RegisterComponent } from './Amal/register/register.component';
 
 import { MenuComponent } from './Amal/menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
-import { AppareilComponent } from './Mouhamed/appareil/appareil.component';
+
 import { NewuserComponent } from './Amine/newuser/newuser.component';
 
 import { AppareilComponent } from './Mouhamed/appareil/appareil.component';
