@@ -1,0 +1,36 @@
+<div class="pos"><mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title class="aff">AFLOR NATUREA</mat-card-title>
+      <mat-card-subtitle>Entreprise  agri-valorisation </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../../assets/image/flyer.jpg" alt="Photo of hormiga">
+    <mat-card-content>
+      <p>
+       <b > AFLOR </b>
+       Extraction of essential and valoristaion of aromatic and medical plants.
+      </p>
+    </mat-card-content>
+    
+    <mat-card-actions>
+      <button mat-button ><mat-icon svgIcon="heart.svg" src="../../../assets/image/heart.svg" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+      LIKE</button>
+      <button mat-button  >Dialogue</button>
+    </mat-card-actions>
+  </mat-card>
+</div> 
+<div class="milieu">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Commentaire</mat-label>
+      <input matInput #message maxlength="256" placeholder="Ex.Taper your commentaire...">
+   
+      <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+    </mat-form-field>
+    <mat-card-actions>
+        <button mat-button >Commenter</button>
+    
+      </mat-card-actions>
+  </form>
+</div>
+

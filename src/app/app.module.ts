@@ -21,11 +21,9 @@ import { MouhamedAppComponent } from './Mouhamed/mouhamed.app.component';
 import { KamelAppComponent } from "./kamel/kamel.app.component";
 import { EsriMapComponent } from "./kamel/esri-map/esri-map.component";
 import {NawfelAppModule} from "./Nawfel/nawfel-app.module";
-import { LoginComponent } from './Amal/login/login.component';
-import { RegisterComponent } from './Amal/register/register.component';
-
-import { MenuComponent } from './Amal/menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
+import { CardComponent } from "./Amal/card/card.component";
+
 
 
 const appRoutes: Routes = [
@@ -41,9 +39,10 @@ const appRoutes: Routes = [
     NawfelAppComponent,
     MarwenAppComponent,
     MouhamedAppComponent,
-    LoginComponent,
-    RegisterComponent,
-    MenuComponent
+    
+    CardComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
