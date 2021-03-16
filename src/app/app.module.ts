@@ -25,6 +25,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { CardComponent } from "./Amal/card/card.component";
 
 
+import { NewuserComponent } from './Amine/newuser/newuser.component';
+
+import { AppareilComponent } from './Mouhamed/appareil/appareil.component';
+import { AppareilService } from './Mouhamed/services/appareil.service';
 
 const appRoutes: Routes = [
   {path: 'amine' ,component:AmineAppComponent},
@@ -38,11 +42,16 @@ const appRoutes: Routes = [
     AmineAppComponent,
     NawfelAppComponent,
     MarwenAppComponent,
-    MouhamedAppComponent,
+    MouhamedAppComponent
     
-    CardComponent,
+    CardComponent ,
     
-    
+   LoginComponent,
+    RegisterComponent,
+    MenuComponent,
+    AppareilComponent,
+    NewuserComponent
+
   ],
   imports: [
     BrowserModule,
@@ -56,10 +65,11 @@ const appRoutes: Routes = [
     NawfelAppModule,
     RouterModule.forRoot(appRoutes)
   ],
-  entryComponents: [AppComponent, KamelAppComponent],
+  entryComponents: [AppComponent, KamelAppComponent,NewuserComponent],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
-  ],
+   AppareilService
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
