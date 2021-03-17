@@ -6,7 +6,7 @@ export class AppareilService {
         },
         {
           name: 'Frigo',
-          status: 'allume'
+          status: 'allumer'
         },
         {
           name: 'Television',
@@ -15,7 +15,7 @@ export class AppareilService {
       ];
       switchOnAll() {
         for(let appareil of this.appareils) {
-          appareil.status = 'allume';
+          appareil.status = 'allumer';
         }
     }
     

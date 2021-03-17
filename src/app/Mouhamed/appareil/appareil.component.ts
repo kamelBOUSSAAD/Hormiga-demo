@@ -25,6 +25,14 @@ export class AppareilComponent implements OnInit {
     }
   ]
 
+  onAllumer(){
+    return this.appareilStatus = 'allumer'
+  }
+
+  onEteindre(){
+    return this.appareilStatus = 'éteint'
+  }
+
   constructor() {
     
   }
@@ -37,9 +45,6 @@ export class AppareilComponent implements OnInit {
     return this.appareilStatus;
   }
 
-  onAllumer(){
-    console.log('On allume tout!')
-  }
 
   getColor() {
     if(this.appareilStatus === 'allumer') {
